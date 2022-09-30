@@ -35,5 +35,17 @@ this program uses Libraries:
 ![Output Example for mypwd program](mypwd_output.png)
 
 
+myecho: 
+
+It's a simple C program similer to echo command
+
+Syntax:
+ ./myecho [Text]
+
+this program uses Libraries:
+        - stdio
+![Output Example for myecho program](myecho_output.png)
+
+
 
 
