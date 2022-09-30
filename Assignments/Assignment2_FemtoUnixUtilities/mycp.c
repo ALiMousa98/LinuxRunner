@@ -7,39 +7,33 @@
 
 #define RET 0
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
-	char buf[100];
-       	int count;
-	
-	if(argc > 3)
-	{	
-		printf("Too Many Args for mycp program \n");
-		return -1;
-	}
-	else if(argc<3)
-	{
-                printf("Too Few Args for mycp program \n");
-                return -1;
-        }
-	else
-	{
+    char buf[100];
+    int count;
 
-		int fd1=open(argv[1],O_RDONLY);
-        int fd2=open(argv[2],O_WRONLY|O_CREAT,0644);
+    if (argc > 3) {
+	printf("Too Many Args for mycp program \n");
+	return -1;
+    } else if (argc < 3) {
+	printf("Too Few Args for mycp program \n");
+	return -1;
+    } else {
 
-        count=read(fd1,buf,100);
-        while(count!=0)
-        {
-                write(fd2,buf,count);
-                count=read(fd1,buf,100);
-        }
+	int fd1 = open(argv[1], O_RDONLY);
+	int fd2 = open(argv[2], O_WRONLY | O_CREAT, 0644);
 
-        close(fd1);
-        close(fd2);
-
+	count = read(fd1, buf, 100);
+	while (count != 0) {
+	    write(fd2, buf, count);
+	    count = read(fd1, buf, 100);
 	}
 
-	
-	return RET;
+	close(fd1);
+	close(fd2);
+
+    }
+
+
+    return RET;
 }

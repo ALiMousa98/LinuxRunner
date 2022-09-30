@@ -10,7 +10,7 @@ Syntax:
   e.g. ./mycp test_copy test_copy2
 
 this program uses Libraries: 
-	- stdin
+	- stdio
 	- unistd
 	- sys/types
 	- sys/stat
@@ -20,3 +20,20 @@ This program handles cases like too many or few arguments, copy the whole conten
 
 
 ![Output Example for mycp program](mycp_output.png)
+
+mypwd: 
+
+It's a simple C program similer to pwd command in linux take no options.
+
+Syntax:
+ ./mypwd
+
+this program uses Libraries:
+        - stdio
+        - unistd
+
+![Output Example for mypwd program](mypwd_output.png)
+
+
+
+
