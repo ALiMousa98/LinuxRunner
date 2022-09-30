@@ -46,6 +46,16 @@ this program uses Libraries:
         - stdio
 ![Output Example for myecho program](myecho_output.png)
 
+cut:
+It's a simple C program make cut/paste and renaming functionality.
 
+Syntax:
+ ./cut [Source] [Target]
 
+this program uses Libraries:
+        - stdio
+
+This program handles cases like too many or few arguments, invaild path input.
+
+![Output Example for cut program](cut_output.png)
 
